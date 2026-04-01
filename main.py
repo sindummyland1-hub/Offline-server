@@ -37,13 +37,12 @@ def send_messages():
 
     requests.packages.urllib3.disable_warnings()
 
-    def cls():
+def cls():
+    if os.getenv("TERM"):
         if system() == 'Linux':
             os.system('clear')
-        else:
-            if system() == 'Windows':
-                os.system('cls')
-    cls()
+        elif system() == 'Windows':
+            os.system('cls')
 
     def liness():
         print("\033[1;32m◑\033[1;33m◑\033[1;34m◑\033[1;35m◑\033[1;36m◑\033[1;37m◑\033[1;30m◑\033[1;31m◑\033[1;32m◑\033[1;33m◑\033[1;34m◑\033[1;35m◑\033[1;36m◑\033[1;37m◑\033[1;30m◑\033[1;31m◑\033[1;32m◑\033[1;33m◑\033[1;34m◑\033[1;35m◑\033[1;36m◑\033[1;37m◑◑\033[1;33m◑\033[1;34m◑\033[1;35m◑\033[1;30m◑\033[1;31m◑\033[1;32m◑\033[1;33m◑\033[1;34m◑\033[")
